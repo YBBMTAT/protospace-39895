@@ -1,0 +1,14 @@
+<div class="card">
+   <%# プロトタイプ画像%>
+  <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype.id)%>
+  <div class="card__body">
+    <%# プロトタイプ名%>
+    <%= link_to prototype.title, prototype_path(prototype.id), class: :card__title%>
+    <p class="card__summary">
+      <%# プロトタイプキャッチコピー%>
+      <%= prototype.catch_copy %>
+    </p>
+    <%# 投稿者名%>
+    <%= link_to "by "+prototype.user.name, user_path(prototype.user), class: :card__user %>
+  </div>
+</div>
