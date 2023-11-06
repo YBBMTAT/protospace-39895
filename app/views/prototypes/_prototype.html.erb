@@ -8,10 +8,6 @@
       <%# プロトタイプキャッチコピー%>
       <%= prototype.catch_copy %>
     </p>
-    <%# プロトタイプコンセプト%>
-    <p class="detail__message">
-      <%= prototype.concept %>
-    </p>
     <%# 投稿者名%>
     <%= link_to "by "+prototype.user.name, user_path(prototype.user), class: :card__user %>
   </div>

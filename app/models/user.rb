@@ -6,7 +6,9 @@ class User < ApplicationRecord
 
   validates :email, presence: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   validates :email, format: { with: /.*\.jp\z/i }
-  validates :encrypted_password, presence: true
+  validates :password, presence: true
+  validates :password, confirmation: { case_sensitive: true }
+  validates :password_confirmation, presence: true
   validates :name, presence: true
   validates :profile, presence: true
   validates :occupation, presence: true
